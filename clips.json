@@ -1,0 +1,14 @@
+{
+   "clips": [
+     {
+       "file_name": "./clips/guitar%20clip.wav",
+       "title": "Cool Guitar Riff",
+         "description": "Someone add to this!"
+     },
+     {
+       "file_name": "./clips/drums.wav",
+       "title": "Backing Drums",
+         "description": "Going for something electric?"
+     }
+   ]
+ }

@@ -1,0 +1,136 @@
+body {
+	background-color: silver;
+	color: black;
+	font-family: 'Roboto', sans-serif;
+	background: linear-gradient(to bottom, cornflowerblue, silver);
+}
+
+h4.media-heading {
+	color: black;
+}
+
+#nav_bar{
+    line-height: 10%;
+    padding-top: 0;
+}
+
+a.navbar-brand {
+	font-size: 30pt;
+	padding-top: 22px;
+}
+
+.nav_content{
+	font-size: 20pt;
+}
+
+#content{
+    padding-top: 0;
+    margin-top: 5%;
+    padding: 10px;
+}
+
+#side_bar{
+    box-shadow: 1px 0px 1px 0px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    height: 100%;
+    width: 20%;
+    
+    background: linear-gradient(#C1E0FB, white);
+}
+#side_bar_contents > li{
+    padding: 10px;
+}
+#sort_by{
+    text-align: center;
+    font-size: 18px;
+    padding-top: 5px;
+}
+.filter_label{
+    font-size: 20px;
+    text-align: center;
+    width: 100%;
+    background-color: white;
+    border-style: solid;
+}
+.collapse{
+    padding: 10px;
+}
+
+#clip_display{
+    margin-left: 20%;
+    padding-left: 50px;
+}
+.media{
+    padding: 15px;
+    background: whitesmoke;
+    width: 80%;
+	color: cornflowerblue;
+}
+
+.media:hover{
+    background: #c5d3ea;
+}
+
+#play_button{
+    height: 60px;
+    width: 60px;
+}
+.contribute_button{
+    float: right;
+}
+
+#playback_bar{
+    margin-bottom: 0px;
+    background-color: lightblue;
+}
+#playback_bar_contents{
+    background-color: #C1E0FB;
+}
+#playback_controls{
+    width: 100%;
+}
+#clip_info{
+    float: left;
+}
+
+
+h5.aboutWords {
+		color: whitesmoke;
+        border-style:solid;
+        border-width: 2px;
+        width: 400px;
+        text-align: center;
+        font-size: 20px;
+				margin-left: auto;
+				margin-right: auto;
+				padding: 20px;
+				font-family: monospace;
+    }
+
+
+/*USED FOR CREATE*/
+#create_form{
+    padding: 20px;
+    height: 50%;
+    background-color: #ddeaff;
+}
+.genre_tag{
+    padding-right: 40px;
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.fadeInDown {
+  animation-name: fadeInDown;
+}
+

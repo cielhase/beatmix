@@ -1,0 +1,243 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <script src="script.js"></script>
+        <link rel="stylesheet" href="style.css">
+        <title>beatmix || LISTEN </title>
+    </head>
+
+<style>
+@import url('https://fonts.googleapis.com/css?family=Roboto:100');
+</style>
+    
+    <body>
+        <!--NAV BAR-->
+         <nav class="navbar navbar-default navbar-fixed-top" id="nav_bar">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#nav_bar_collapse" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                  </button>
+                    <a class="navbar-brand" class="nav_content" href="beatmixhome.html">beatmix</a>
+                </div>
+                
+                <div class="collapse navbar-collapse" id="nav_bar_collapse">
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a class="nav_content" href="listen.html">LISTEN</a></li>
+                        <li><a class="nav_content" href="create.html">CREATE</a></li>
+                    </ul>
+                  <ul class="nav navbar-nav navbar-right">
+                    <li><a class="nav_content" href="login.html">LOG IN</a></li>
+                  </ul>
+                </div>  
+            </div>
+        </nav>
+        <div id="content">
+            <div class="jumbotron">
+                <div class="container">
+                    <h1>Listen</h1>
+                    <p>Listen to uploaded clips, comment, like, or even contribute to produce more beats.</p>
+                </div>
+            </div>
+            
+            
+             <!-- sidebar -->
+            <div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="side_bar" role="navigation">
+                <ul class="nav" id="side_bar_contents">
+                    <li class="active">
+                      <div class="input-group">
+                          <input type="text" class="form-control" placeholder="Search">
+                          <span class="input-group-btn">
+                                <button class="btn btn-default" type="button">GO!</button>
+                          </span>
+                      </div>
+                    </li>
+                    <li>
+                        <div class="input-group" >
+                            <label id="sort_by">Sort by: </label>
+                            <span class="input-group-btn">
+                                  <button class="btn btn-default dropdown-toggle" 
+										  data-toggle="dropdown" aria-haspopup="true" 
+										  aria-expanded="false">
+									  Most Relevant
+									  <span class="caret">
+									  </span></button>
+
+                                  <ul class="dropdown-menu dropdown-menu-right">
+                                  <li><a href="#">Most Relevant</a></li>
+                                  <li><a href="#">Most Liked</a></li>
+                                  <li><a href="#">Most Viewed</a></li>
+                                </ul>
+                              </span>
+                      </div>
+                    </li>
+          <div class="panel panel-default">   
+				<button data-toggle="collapse" data-target="#genres" class="filter_label">GENRE
+			  	</button>
+            <div class="collapse" id="genres">
+                    <li>
+                        <label>
+					<input type="checkbox"
+						 value=""> classical</label>
+                    </li>
+                    <li>
+						<label>
+						<input type="checkbox" 
+							   value="">  jazz
+						</label>
+                    </li>
+                            <li>
+                                <label><input type="checkbox" value="">  rock</label>
+                            </li>
+                            <li>
+                                <label><input type="checkbox" value="">  hip-hop</label>
+                            </li>
+                            <li>
+                                <label><input type="checkbox" value="">  electric</label>
+                            </li>
+                        </div>
+                    </div>
+					
+ <div class="panel panel-default">
+      <button data-toggle="collapse" data-target="#instruments" class="filter_label">INSTRUMENT</button>
+        <div class="collapse" id="instruments">
+              <li>
+              <label><input type="checkbox" 
+							value="">  voice</label>
+                            </li>
+                            <li>
+                                <label><input type="checkbox" value="">  guitar</label>
+                            </li>
+                            <li>
+                                <label><input type="checkbox" value="">  piano</label>
+                            </li>
+                            <li>
+                                <label><input type="checkbox" value="">  saxophone</label>
+                            </li>
+                            <li>
+                                <label><input type="checkbox" value="">  trumpet</label>
+                            </li>
+                        </div>
+                    </div>
+      <div class="panel panel-default">
+            <button data-toggle="collapse" data-target="#lengths" class="filter_label">AUDIO LENGTH</button>
+               <div class="collapse" id="lengths">
+                  <li>
+                  <label><input type="radio" value="">  less than 1 minute </label>
+					 </li>
+              		<li>
+             <label><input type="radio" value="">   1 ~ 2 minutes
+						</label>
+					   </li>
+				   	<li>
+                    <label><input type="radio" value="">   2 ~ 3 minutes </label>
+                       </li>
+                     <li>
+                  <label><input type="radio" value="">   3 ~ 4 minutes 
+						 </label>
+                            </li>
+                            <li>
+                         <label><input type="radio" value="">   4 ~ 5 minutes </label>
+                            </li>
+                        </div>
+                    </div>
+                </ul>
+            </div>
+   
+            <!--CLIP DISPLAY-->
+            <div id="clip_display">
+                <div class="media">
+                      <div class="media-left">
+                        <button type="button" class="btn btn-default" id="play_button" onclick="play_clip('./clips/guitar%20clip.wav')">
+                            <span class="glyphicon glyphicon-play" aria-hidden="true"></span>
+                        </button>
+                      </div>
+                      <div class="media-body">
+                        <h4 class="media-heading">
+						 o4ran:: some guitar riff?? 
+						  </h4>
+                        <p>Be the one to add to this!</p>
+                      </div>
+                    <div class="media-right">
+	<!-- changed --> 
+
+						 <button data-toggle="collapse" data-target="#contribute_settings" class="btn btn-default">Contribute</button>
+                        <button type="button" class="btn btn-default" id="like_button" onclick="process_like()">
+                            <span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span>
+                        </button>
+                        <label id="likes"> 0 </label>
+                    </div>
+                    
+                    <div class="collapse" id="contribute_settings">
+                        <div class="form-group">
+                            
+                            <div class="row">
+                                <input id="input-1" type="file" class="file">
+                            </div>
+                            
+                            <label for="Description">Description: </label>
+                            <textarea class="form-control" rows="3" id="description_box"></textarea>
+                            <button class="btn btn-default" data-toggle="collapse" data-target="#contribute_settings" onclick="submit_contribution()">Submit</button>
+                            
+                        </div>
+						
+						
+                    </div>
+                </div>
+                
+                <div class="media">
+                      <div class="media-left">
+                        <button type="button" class="btn btn-default" id="play_button" onclick="play_clip('./clips/drums.wav')">
+                            <span class="glyphicon glyphicon-play" aria-hidden="true"></span>
+                        </button>
+                      </div>
+                      <div class="media-body">
+                        <h4 class="media-heading">brooklyn_drums</h4>
+                        <p>Need a beat? Branch off on this track!</p>
+                      </div>
+                    <div class="media-right">
+<!-- changed -->
+		       <button data-toggle="collapse" data-target="#contribute_settings2" class="btn btn-default">Contribute</button>
+                        <button type="button" class="btn btn-default" id="like_button" onclick="process_like()">
+                            <span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span>
+                        </button>
+                        <label id="likes"> 0 </label>
+                    </div>
+                    
+                    <div class="collapse" id="contribute_settings2">
+                        <div class="form-group">
+                            
+                            <div class="row">
+                                <input id="input-1" type="file" class="file">
+                            </div>
+                            
+                            <label for="Description">Description: </label>
+                            <textarea class="form-control" rows="3" id="description_box"></textarea>
+                            <button class="btn btn-default" data-toggle="collapse" data-target="#contribute_settings2" onclick="submit_contribution2()">Submit</button>
+                        </div>
+                    </div>
+                    
+                </div>
+                
+                
+            </div>
+            
+            <!--PLAYBACK BAR-->
+            <nav class="navbar navbar-fixed-bottom navbar-light bg-faded" id="playback_bar">
+                <div id="playback_bar_contents">
+                    <audio controls preload="auto" id="playback_controls">
+                         <source id="audio_source" src=""
+                                 type='audio/wav'>
+                    </audio>
+                </div>
+            </nav>
+        </div>
+    </body>
+</html>
